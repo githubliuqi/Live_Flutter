@@ -1,5 +1,4 @@
-group 'com.tencent.live_beauty_plugin'
-version '1.0'
+//group 'com.tencent.live_beauty_plugin'
 
 buildscript {
     repositories {
@@ -9,8 +8,18 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     }
 }
+
+//plugins {
+//    id 'com.android.library'
+//    id 'com.github.dcendents.android-maven'
+//}
+
+
+group 'com.github.githubliuqi'
+version '1.0.0'
 
 rootProject.allprojects {
     repositories {
@@ -20,6 +29,7 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 
 android {
@@ -38,4 +48,5 @@ android {
         api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
     }
 }
+
 
